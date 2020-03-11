@@ -1,13 +1,17 @@
-﻿//Reading from Console Writing to Console
-using System;
+﻿using System;
 
-namespace ReadingWritingConsole
+namespace IntroductiontoCsharpMastekLearning
 {
     class Program
     {
+        static void Main1()
+        {
+            Console.WriteLine("Welcome to C# Mastek Training part 1");
+        }
         static void Main()
         {
-            Console.WriteLine("Please enter your name");
+            Console.WriteLine("Welcome to C# Mastek Training");
+            Main1();
         }
-}
+    }
 }
