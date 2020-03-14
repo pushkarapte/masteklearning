@@ -1,5 +1,5 @@
 ﻿
-//Various operators & Nullable types & Null coalescing
+//Various operators & Nullable types & Null coalescing & Type conversion
 using System;
 
 namespace Operatorsincsharp
@@ -82,7 +82,36 @@ namespace Operatorsincsharp
             }
              */
             Console.WriteLine("AT are {0}", AT);
+
+            
+           /* int j = 100;
+            float f = j;
+            Console.WriteLine(f);
+        
+            float f = 12123.123123F;
+                int i = (int) f;
+        Console.WriteLine(i);
+        
+            
+        float f = 12123.123123F;
+                int i = Convert.ToInt32(f);
+            Console.WriteLine(i);   
+        
+            */
+            string strNumber = "1000TGTG";
+            int store = 0;
+            bool IsConversionSuccessful = int.TryParse(strNumber,out store);
+            if (IsConversionSuccessful)
+            {
+                Console.WriteLine(store);
+            }
+            else
+            {
+                Console.WriteLine("Enter something valid");
+            }
         }
+
 
     }
 }
+            
