@@ -1,5 +1,5 @@
 ﻿
-//Various operators 
+//Various operators & Nullable types & Null coalescing
 using System;
 
 namespace Operatorsincsharp
@@ -8,6 +8,8 @@ namespace Operatorsincsharp
     {
         static void Main()
         {
+
+
             float num = 20;
             float denom = 40;
             float result = num / denom;
@@ -34,20 +36,52 @@ namespace Operatorsincsharp
                 Console.WriteLine("Match");
             }
 
-            int Num = 44;
+            int Num = 4;
             bool IsNum44 = Num == 54 ? true : false;
 
-           /* if (Num == 44)
+            /* if (Num == 44)
+             {
+                 IsNum44 = true;
+             }
+             else
+             {
+                 IsNum44 = false;
+             }
+             */
+            Console.WriteLine("number == 44 is {0}", IsNum44);
+           
+
+            // Nullable types example
+            
+            bool? AreYouMajor = null;
+
+            if (AreYouMajor == true)
             {
-                IsNum44 = true;
+                Console.WriteLine("He is a major");
+            }
+            else if (AreYouMajor == false)
+            {
+                Console.WriteLine("He is not a major");
             }
             else
             {
-                IsNum44 = false;
+                Console.WriteLine("Did not answer the question");
             }
-            */
-            Console.WriteLine("number == 44 is {0}", IsNum44);  
-        
+
+            int? TOS = null;
+            int AT = TOS ?? 0;
+
+           /* if (TOS == null)
+            {
+                AT = 0;
+            }
+            else
+            {
+                AT = (int)TOS;
+
+            }
+             */
+            Console.WriteLine("AT are {0}", AT);
         }
 
     }
