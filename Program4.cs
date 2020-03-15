@@ -1,4 +1,4 @@
-﻿//Use of various statements like if,else,switch etc
+﻿//Use of various statements like if,else,switch,loops etc
 using System;
 
 
@@ -8,7 +8,66 @@ namespace Statementsincsharp
     {
         static void Main()
         {
-            int TotalCoffeeCost = 0;
+            for (int i = 0 ; i <= 30 ; i++)
+            {
+                if(i % 2 == 1)
+                  continue;
+                Console.WriteLine(i);
+            }
+    
+            //int[] Numbers = new int[3];
+            //Numbers[0] = 100;
+            //Numbers [1] = 101;
+            //Numbers [2] = 103;
+
+            //foreach (int k in Numbers)
+            //{
+            //    Console.WriteLine(k);
+            //}
+             /*for (int j = 0; j < Numbers.Length; j++ )
+            {
+                Console.WriteLine(Numbers[j]);
+            }*/
+
+
+
+
+
+
+
+
+
+
+
+
+            /* do
+            {
+                string UserChoice = "";
+                Console.WriteLine("Enter the target you want ?");
+                int UserTarget = int.Parse(Console.ReadLine());
+                int Start = 0;
+                while (Start <= UserTarget)
+                {
+                    Console.Write(Start + " ");
+                    Start += 2;
+                }
+
+                do
+                {
+                    Console.WriteLine("Do you want to continue --> YES or NO ");
+                    UserChoice = Console.ReadLine().ToUpper();
+
+                    if (UserChoice != "YES" && UserChoice != "NO")
+                    {
+                        Console.WriteLine("Invalid Choice, Please say Yes or No");
+                    }
+                } while (UserChoice != "YES" && UserChoice != "NO");
+            } while (UserChoice == "YES");
+        
+            }
+
+            
+            /* int TotalCoffeeCost = 0;
             Start:
             Console.WriteLine("Please select your coffee size ----> 1 - Small , 2 - Medium , 3 - Large");
             int UserChoice = int.Parse(Console.ReadLine());
@@ -87,7 +146,6 @@ namespace Statementsincsharp
 
 
             } */
-
         }
-    }
-}
+        }   
+        }
