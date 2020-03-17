@@ -1,7 +1,85 @@
 ﻿
-//Classes Static Instance Inheritance in C#
+//Classes & Static and Instance Class & Inheritance & Polymorphism in C#
 using System;
 
+public class Employee
+{
+    public string firstname = "fn";
+    public string lastname = "ln";
+
+    public virtual void PrintFullName()
+{
+    Console.WriteLine(firstname + " " + lastname);
+}
+}
+
+
+public class FullTimeEmployee : Employee
+{
+    public override void  PrintFullName()
+    {
+        Console.WriteLine(firstname + " " + lastname + " -> Full Time");
+    }
+}
+public class PartTimeEmployee : Employee
+{
+    public override void PrintFullName()
+    {
+        Console.WriteLine(firstname + " " + lastname + "-> Part Time");
+    }
+}
+public class TempTimeEmployee : Employee
+{
+    public override void PrintFullName()
+    {
+        Console.WriteLine(firstname + " " + lastname + "-> Temporary");
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        Employee[] employee = new Employee[4];
+        employee[0] = new Employee();
+        employee[1] = new FullTimeEmployee();
+        employee[2] = new PartTimeEmployee();
+        employee[3] = new TempTimeEmployee();
+         
+        foreach ( Employee e in employee)
+        {
+            e.PrintFullName();
+        }
+        
+            
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 public class ParentClass
 {
     public ParentClass()
@@ -27,7 +105,7 @@ class Program
         ChildClass CC = new ChildClass();
         
     }   
-}
+} */
 
 
 
