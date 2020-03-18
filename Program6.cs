@@ -1,7 +1,189 @@
 ﻿
-//Classes & Static and Instance Class & Inheritance & Polymorphism in C#
+//Classes & Static and Instance Class & Inheritance & Polymorphism & Properties & Structures in C#
 using System;
 
+
+public struct Customer
+{
+    private int _id;
+    private string _name;
+
+    public string Name
+    {
+        get { return _name; }
+        set { _name = value; }
+    }
+
+    public int ID
+    {
+        get { return this._id; }
+        set { this._id = value; }
+    }
+
+    public Customer(int Id, string Name)
+    {
+        this._id = Id;
+        this._name = Name;
+    }
+
+    public void Print()
+    {   
+         Console.WriteLine("Student ID -> {0}  &&  Student name -> {1}", this._id, this._name);
+    }
+}
+    public class Program
+    {
+        public static void Main()
+        {
+            Console.WriteLine("Student data printed using Structures from parameterised constructor");
+            Customer C1 = new Customer(137, "Pushkar Apte");
+            C1.Print();
+
+            Console.WriteLine("\nStudent data printed using Structures from default constructor");
+            Customer C2 = new Customer();
+            C2.ID = 138;
+            C2.Name = "Simran Lalwani";
+            C2.Print();
+
+            Console.WriteLine("\nStudent data printed using Structures from object initializer syntax");
+            Customer C3 = new Customer
+            {
+                ID = 139,
+                Name = "Payal Raghani"
+            };
+            C3.Print();
+
+            
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+public class Student
+{
+    private int _id;
+    private string _Name;
+    private int _Passing = 35;
+
+   public string City { get; set; }
+    public int PassMark
+    {
+        get
+        {
+            return this._Passing;
+        }
+    }
+
+    public string Name
+    {
+        set
+        {
+
+            if (string.IsNullOrEmpty(value))
+            {
+                throw new Exception("Student name cannot be empty");
+            }
+            this._Name = value;
+        }
+        get
+        {
+            return string.IsNullOrEmpty(this._Name) ? "No Name" : this._Name;
+        }
+    }    
+
+    public string GetName()
+    {
+        if (string.IsNullOrEmpty(this._Name))
+        {
+            return "No Name";
+        }
+        else
+        {
+            return this._Name;
+        }
+    }
+
+    public int ID
+    {
+        set
+        {
+            if (value <= 0)
+            {
+                throw new Exception("ID cannot be negative");
+            }
+            this._id = value;
+        }
+        get
+        {
+            return this._id;
+        }
+    }
+    public int GetID()
+    {
+        return this._id;
+    }
+}
+public class Program
+{
+    public static void Main()
+    {
+        Student S1 = new Student();
+        S1.ID = 137;
+        S1.Name = "Pushkar Apte";
+        Console.WriteLine("Using properties to print student data");
+        Console.WriteLine("Student id is {0}", S1.ID); 
+        Console.WriteLine("Student name is {0}", S1.Name);
+        Console.WriteLine("Passing marks is {0}", S1.PassMark);
+        Console.WriteLine("Students city is {0}", S1.City);
+    }
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 public class Employee
 {
     public string firstname = "fn";
@@ -56,7 +238,7 @@ public class Program
     }
 
 
-
+*/
 
 
 
