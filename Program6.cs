@@ -1,8 +1,69 @@
 ﻿
-//Classes & Static and Instance Class & Inheritance & Polymorphism & Properties & Structures in C#
+//Classes & Static and Instance Class & Inheritance & Polymorphism & Properties & Structures  & Interfaces in C#
 using System;
+interface IStudent
+{
+    void Print();
+    
+}
+
+interface IStudent1 : IStudent
+{
+    void Print1();
+}
 
 
+public class Student : IStudent1
+{
+    public void Print()
+    {
+        Console.WriteLine("Output for an interface declaration");
+    }
+
+    public void Print1()
+    {
+        Console.WriteLine("\nClass inheriting multiple interfaces");
+    }
+}
+
+
+
+public class Program
+{
+    public static void Main()
+    {
+        Student S1 = new Student();
+        S1.Print();
+        IStudent1 S2 = new Student();
+        S2.Print1();
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 public struct Customer
 {
     private int _id;
@@ -56,7 +117,7 @@ public struct Customer
             
         }
     }
-
+*/
 
 
 
