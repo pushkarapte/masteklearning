@@ -1,6 +1,134 @@
 ﻿
-//Classes & Static and Instance Class & Inheritance & Polymorphism & Properties & Structures  & Interfaces & Abstract Classes & Delegates in C#
+
 using System;
+using System.IO;
+class InnerException
+{
+    public static void Main()
+    {
+        try
+        {
+            try
+            {
+                Console.WriteLine("Please enter the first number");
+                int fn = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Please enter the second number");
+                int sn = Convert.ToInt32(Console.ReadLine());
+
+                int result = fn / sn;
+                Console.WriteLine("Result -> {0}", result);
+            }
+            catch (Exception ex)
+            {
+                string filepath = "C:\\Sample Files\\Log1";
+                if (File.Exists(filepath))
+                {
+                    StreamWriter sw = new StreamWriter(filepath);
+                    sw.Write(ex.GetType().Name);
+                    sw.Write(ex.Message);
+                    sw.Close();
+                    Console.WriteLine("Please try again");
+                }
+                else
+                {
+                    throw new FileNotFoundException(filepath + "does no exist", ex);
+                }
+            }
+            
+         }
+        catch (Exception exception)
+        {
+            Console.WriteLine("Current Exception -> {0}", exception.GetType().Name);
+            if (exception.InnerException != null)
+            {
+                Console.WriteLine("Inner Exception -> {0}", exception.InnerException.GetType().Name);
+            }
+            }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+class ExceptionHandling
+{
+    public static void Main()
+    {
+        StreamReader streamreader = null;
+        try
+        {
+             streamreader = new StreamReader("C:\\Sample Files\\Data1.txt");
+            Console.WriteLine(streamreader.ReadToEnd());
+            
+        }
+        catch (FileNotFoundException ex)
+        {
+            Console.WriteLine("Please check if the file {0} exist", ex.FileName);
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        finally
+        {
+            if (streamreader != null)
+            {
+                streamreader.Close();
+            }
+                Console.WriteLine("Resources Released in finally block");
+
+            
+        }
+    }
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 public delegate void PrintDelegate(string Message);
 
 class Pushkar
@@ -16,7 +144,7 @@ class Pushkar
     {
         Console.WriteLine(Message);
     }
-}
+} */
 
 
 
