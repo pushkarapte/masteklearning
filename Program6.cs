@@ -1,6 +1,116 @@
 ﻿
-//Classes & Static and Instance Class & Inheritance & Polymorphism & Properties & Structures  & Interfaces in C#
+//Classes & Static and Instance Class & Inheritance & Polymorphism & Properties & Structures  & Interfaces & Abstract Classes in C#
 using System;
+public abstract class Student
+{
+    public abstract void Print();
+   
+}
+public  class Program : Student
+{
+    public override void Print()
+    {
+        Console.WriteLine("Providing implementation for abstract class");
+    }
+
+
+    public static void Main()
+    {
+        Student S = new Program();
+        S.Print();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+interface I1
+{
+    void Interfacemethod();
+}
+
+interface I2
+{
+    void Interfacemethod();
+}
+
+public class Program : I1,I2
+{
+
+     public void Interfacemethod()
+    {
+        Console.WriteLine("I1 interfacemethod printed by default interface implementation");
+    }
+     void I2.Interfacemethod()
+     {
+         Console.WriteLine("\nI2 interfacemethod printed by explicit interface implementation");
+     }
+
+    public static void Main()
+    {
+        Program P = new Program();
+        P.Interfacemethod();
+        ((I2)P).Interfacemethod();
+        
+        // I1 i1 = new Program();
+        //I2 i2 = new Program();
+        //i1.Interfacemethod();
+        //i2.Interfacemethod();
+
+        //((I1)P).Interfacemethod();
+        //((I2)P).Interfacemethod();
+
+       
+    }
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 interface IStudent
 {
     void Print();
@@ -40,7 +150,7 @@ public class Program
     }
 }
 
-
+*/
 
 
 
