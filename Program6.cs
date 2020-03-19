@@ -1,6 +1,47 @@
 ﻿
-//Classes & Static and Instance Class & Inheritance & Polymorphism & Properties & Structures  & Interfaces & Abstract Classes in C#
+//Classes & Static and Instance Class & Inheritance & Polymorphism & Properties & Structures  & Interfaces & Abstract Classes & Delegates in C#
 using System;
+public delegate void PrintDelegate(string Message);
+
+class Pushkar
+{
+    public static void Main()
+    {
+        
+        Print("Printing message using delegate");
+        // delegate is a type safe fucntion pointer
+    }
+
+    public static void Print(string Message)
+    {
+        Console.WriteLine(Message);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 public abstract class Student
 {
     public abstract void Print();
@@ -20,7 +61,7 @@ public  class Program : Student
         S.Print();
     }
 }
-
+*/
 
 
 
