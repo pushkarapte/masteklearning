@@ -10,7 +10,7 @@ namespace IntroductiontoCsharpMastekLearning
         }
         static void Main()
         {
-            Console.WriteLine("\nWelcome to C# Mastek Training changes done to local machine using git commands");
+            Console.WriteLine("\nWelcome to C# Mastek Training changes done to local machine using git pull command");
             Main1();
         }
     }
