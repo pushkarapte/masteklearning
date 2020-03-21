@@ -2,6 +2,296 @@
 
 using System;
 using System.IO;
+using System.Text;
+using System.Collections.Generic;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+public class Program
+{
+    public static void Main()
+    {
+        StringBuilder userstring = new StringBuilder("C#");
+        userstring.Append(" Hello");
+        userstring.Append(" to");
+        userstring.Append(" Learning");
+        userstring.Append(" Video");
+        Console.WriteLine(userstring);
+    }
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+public class Program
+{
+    public static void Main()
+    {
+        Customer C1 = new Customer();
+        C1.Firstname = "Pushkar";
+        C1.Lastname = "Apte";
+        Customer C2 = new Customer();
+        C2.Firstname = "Pushkar";
+        C2.Lastname = "Apte";
+        
+        Console.WriteLine("Showing reference and value equality");
+        Console.WriteLine();
+        Console.WriteLine(C1 == C2);
+        Console.WriteLine(C1.Equals(C2));
+    }
+}
+
+public class Customer
+{
+    public string Firstname { get; set; }
+    public string Lastname { get; set; }
+
+    public override bool Equals(object obj)
+    {
+        if (obj == null)
+        {
+            return false;
+        }
+        if (!(obj is Customer))
+        {
+            return false;
+        }
+       return this.Firstname == ((Customer)obj).Firstname &&
+                this.Lastname == ((Customer)obj).Lastname;
+    } 
+     
+    public override int  GetHashCode()
+{
+    return this.Firstname.GetHashCode() ^ this.Lastname.GetHashCode();
+}
+    }
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+public class Program
+{
+    public static void Main()
+    {
+        bool Equal = Calculator<int>.AreEqual(10, 10);
+        if (Equal)
+        {
+            Console.WriteLine("Checked using Generics for string");
+            Console.WriteLine("\nEqual");
+        }
+        else
+        {
+            Console.WriteLine("Checked using Generics for string");
+            Console.WriteLine("\nNot Equal");
+        }
+
+    }
+}
+public class Calculator<T>
+{
+    public static bool AreEqual(T Value1, T Value2)
+    {
+        return Value1.Equals(Value2);
+    }
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+public class Program
+{
+    private static void Main()
+    {
+        Calculator.Multiply(20,30);
+    }
+}
+public class Calculator 
+{  
+    [ObsoleteAttribute("Use Multiply(List<int> numbers)",true)]
+    public static int Multiply(int fn,int sn)
+    {
+        return fn * sn;
+     }
+    public static int Multiply(List<int> numbers)
+    {
+        int Multiply = 0;
+        foreach (int number in numbers)
+        {
+            Multiply = Multiply * number;
+     }
+        return Multiply;
+    }
+   
+    
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+class Program
+{
+    public static void Main()
+    {
+        Student[] students = new Student[3];
+        students[0] = new Student
+        {
+            Name = "Pushkar",
+            Subject = Subject.Unknown
+        };
+
+        students[1] = new Student
+        {
+            Name = "Harsh",
+            Subject = Subject.BDA
+        };
+        students[2] = new Student
+        {
+            Name = "Preet",
+            Subject = Subject.R
+        };
+        foreach (Student student in students)
+        {
+            Console.WriteLine("Name is {0} then subject is {1}", student.Name, student.Subject);
+        }
+    }
+    public static string GetSubject(Subject subject)
+    {
+        switch (subject)
+        {
+            case Subject.Unknown:
+                return "Unknown";
+            case Subject.BDA:
+                return "BDA";
+            case Subject.R:
+                return "R";
+             default:
+                return "Invalid Subject";
+        }
+    }
+
+    public enum Subject
+    {
+        Unknown,
+        BDA,
+        R
+    }
+    public class Student
+    {
+        public string Name { get; set; }
+        public Subject Subject { get; set; }
+    }
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 class InnerException
 {
     public static void Main()
@@ -48,7 +338,7 @@ class InnerException
     }
 }
 
-
+*/
 
 
 
