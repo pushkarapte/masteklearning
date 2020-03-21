@@ -33,6 +33,17 @@ namespace WebApplication1
                 listEmployees.FirstOrDefault(emp => emp.EmployeeId == EmployeeId).Name = value;
             }
         }
+        public string this[string Gender]
+        {
+            get
+            {
+                return this.listEmployees.Count(gen => gen.Gender == Gender).ToString();
+            }
+            set
+            {
+                listEmployees.FirstOrDefault(gen => gen.Gender == Gender).Name = value;
+            }
+        }
     
         }
 }

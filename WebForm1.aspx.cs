@@ -17,12 +17,11 @@ namespace WebApplication1
             Response.Write("Name of the employee with id =2" + "  " +C[2]);
             Response.Write("<br/>");
             Response.Write("Name of the employee with id =3" + "  " +C[3]);
-            
-            
-            
-            
-            
-            
+            Response.Write("<br/>");
+            Response.Write("<br/>");
+            Response.Write("Total number of male employees" + " " + C["Male"]);
+            Response.Write("<br/>");
+            Response.Write("Total number of female employees" + " " + C["Female"]); 
             
             
             
