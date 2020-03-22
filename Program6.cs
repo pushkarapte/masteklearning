@@ -4,7 +4,85 @@ using System;
 using System.IO;
 using System.Text;
 using System.Collections.Generic;
+public class Program
+{
+    public static void Main()
+    {
+        Customer c1 = new Customer()
+        {
+            ID = 1,
+            Name = "Pushkar",
+            Gender = "Male"
+        };
+        Customer c2 = new Customer()
+        {
+            ID = 2,
+            Name = "Payal",
+            Gender = "Female"
+        };
+        Customer c3 = new Customer()
+        {
+            ID = 3,
+            Name = "Harsh",
+            Gender = "Male"
+        };
+        Customer c4 = new Customer()
+        {
+            ID = 4,
+            Name = "Preeti",
+            Gender = "Female"
+        };
 
+        Stack<Customer> stackcustomers = new Stack<Customer>();
+        stackcustomers.Push(c1);
+        stackcustomers.Push(c2);
+        stackcustomers.Push(c3);
+        stackcustomers.Push(c4);
+
+        Console.WriteLine("Total number of items in the stack before are " + stackcustomers.Count);
+        Customer c = stackcustomers.Pop();
+        Console.WriteLine();
+        Console.WriteLine(c3.ID + " -- " + c3.Name);
+        Console.WriteLine();
+        Console.WriteLine("Total number of items left are " + stackcustomers.Count);
+
+        //Queue<Customer> queueofcustomer = new Queue<Customer>();
+        //queueofcustomer.Enqueue(c1);
+        //queueofcustomer.Enqueue(c2);
+        //queueofcustomer.Enqueue(c3);
+        //queueofcustomer.Enqueue(c4);
+
+        //if (queueofcustomer.Contains(c2))
+        //{
+            
+        //    Console.WriteLine("Existing Customer");
+        //    Console.WriteLine();
+        //}
+        //else
+        //{
+            
+        //    Console.WriteLine("Invalid Customer");
+        //    Console.WriteLine();
+        //}
+
+        //Customer c = queueofcustomer.Peek();
+        //Console.WriteLine("Using peek instead of dequeue");
+        //Console.WriteLine();
+        //Console.WriteLine(c2.ID + "----" + c2.Name);
+        //Console.WriteLine();
+        //Console.WriteLine("Total number of customers in queue are " + queueofcustomer.Count);
+
+       
+
+    }
+}
+
+public class Customer
+{
+    public int ID { get; set; }
+    public string Name { get; set; }
+    public string Gender { get; set; }
+}
 
 
 
