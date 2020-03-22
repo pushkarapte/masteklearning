@@ -1,9 +1,49 @@
-﻿
-
-using System;
+﻿using System;
 using System.IO;
 using System.Text;
 using System.Collections.Generic;
+using System.Threading;
+public class Program
+{
+    public static void Main()
+    {
+        Thread T1 = new Thread(delegate() {Numbers.PrintNumbers();});
+        T1.Start();
+    }
+}
+public class Numbers
+{
+    public static void PrintNumbers()
+    {
+        int i;
+        Console.WriteLine("Thread is as follows");
+        for (i = 1; i <= 10; i++)
+        {
+            
+            Console.WriteLine(i);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 public class Program
 {
     public static void Main()
@@ -84,7 +124,7 @@ public class Customer
     public string Gender { get; set; }
 }
 
-
+*/
 
 
 
